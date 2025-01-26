@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smurf do Brand - Guia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-blue: #00f3ff;
+            --dark-bg: #0a0a0f;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-bg);
+            color: #fff;
+            margin: 0;
+            padding: 2rem 1rem;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid var(--neon-blue);
+            box-shadow: 0 0 20px var(--neon-blue);
+            margin-bottom: 1.5rem;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            margin: 1rem 0;
+            background: linear-gradient(45deg, var(--neon-blue), #0066ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .card {
+            background: rgba(10, 10, 35, 0.9);
+            border: 1px solid rgba(0, 243, 255, 0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            position: relative;
+            transition: transform 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 12px;
+            padding: 2px;
+            background: linear-gradient(45deg, var(--neon-blue), transparent);
+            -webkit-mask: 
+                linear-gradient(#fff 0 0) content-box, 
+                linear-gradient(#fff 0 0);
+            mask: 
+                linear-gradient(#fff 0 0) content-box, 
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            animation: borderGlow 2s infinite;
+        }
+
+        @keyframes borderGlow {
+            0% { opacity: 0.8; }
+            50% { opacity: 1; }
+            100% { opacity: 0.8; }
+        }
+
+        .card-title {
+            color: var(--neon-blue);
+            font-size: 1.5rem;
+            margin: 0 0 1rem 0;
+            text-transform: uppercase;
+        }
+
+        .rank-image {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 8px;
+            margin: 1rem 0;
+            transition: transform 0.3s ease;
+        }
+
+        .rank-image:hover {
+            transform: scale(1.02);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            padding: 0.5rem 0;
+            margin-left: 1.5rem;
+            position: relative;
+        }
+
+        ul li::before {
+            content: '🔥';
+            position: absolute;
+            left: -1.5rem;
+        }
+
+        .lol-graphs {
+            width: 120px;
+            margin: 1rem auto;
+            display: block;
+            filter: drop-shadow(0 0 8px var(--neon-blue));
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2rem;
+            }
+            
+            .card {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="https://support-leagueoflegends.riotgames.com/hc/article_attachments/10152298028179" 
+                 alt="Ícone" 
+                 class="profile-img">
+            <h1 class="title">Smurf do Brand</h1>
+            
+            <a href="https://www.leagueofgraphs.com/pt/rankings/summoners/brand" target="_blank">
+                <img src="https://github.com/smurfbrand/smurfbrand.github.io/blob/main/img%20link.png?raw=true" 
+                     alt="League of Graphs" 
+                     class="lol-graphs">
+            </a>
+        </header>
+
+        <div class="card">
+            <h2 class="card-title">Sobre Mim</h2>
+            <p>🎮 Mestre 5 seasons consecutivas<br>
+               🔥 Top 1 Brand BR<br>
+               🌎 Top 1 Brand Mundial</p>
+            <img src="https://github.com/smurfbrand/smurfbrand.github.io/blob/main/top1%20mundo.png?raw=true" 
+                 alt="Top 1 Mundo" 
+                 class="rank-image">
+        </div>
+
+        <div class="card">
+            <h2 class="card-title">Guia para Suporte</h2>
+            <ul>
+                <li>Campeões de Hard Engage: Nautilus, Leona, Rell</li>
+                <li>Campeões de Peel: Seraphine, Nami, Zyra</li>
+                <li>Posicionamento: Mantenha-se à frente e proteja</li>
+                <li>Evitar: Xerath e campeões sem sinergia</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2 class="card-title">Estratégia de Equipe</h2>
+            <ul>
+                <li>Objetivos: Esperem minha ultimate</li>
+                <li>Jungle: Foco em ganks coordenados</li>
+                <li>Combates: Aproveitem meu controle de massa</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2 class="card-title">Dicas Gerais</h2>
+            <ul>
+                <li>Confie nas calls</li>
+                <li>Aprenda com cada partida</li>
+                <li>Mantenha o foco nos objetivos</li>
+            </ul>
+            <p style="margin-top: 1rem; color: var(--neon-blue);">"Siga as estratégias e colha os resultados!"</p>
+        </div>
+    </div>
+</body>
+</html>
